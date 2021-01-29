@@ -1,0 +1,11 @@
+[package]
+name = "test_project"
+version = "0.1.0"
+authors = ["mohammad katoozi <mohammad.katoozi@snapp.cab>"]
+edition = "2018"
+
+# [lib]
+# name = "quux"
+# path = "src/clusers.rs"
+
+[dependencies]

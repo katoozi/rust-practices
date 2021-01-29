@@ -1,0 +1,8 @@
+[package]
+name = "modules_imports_use_statement"
+version = "0.1.0"
+authors = ["mohammad katoozi <mohammad.katoozi@snapp.cab>"]
+edition = "2018"
+
+[dependencies]
+myxponent = { path = "../myxponent" }
