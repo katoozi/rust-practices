@@ -1,12 +1,21 @@
 struct Color(u8, u8, u8);
 
-struct Dummy;
-
 struct Player {
     name: String,
     iq: u8,
     friends: u8,
     score: u16,
+}
+
+impl Player {
+    fn new() -> Player {
+        Player {
+            name: "test".to_owned(),
+            iq: 10,
+            friends: 20,
+            score: 100,
+        }
+    }
 }
 
 fn main() {
@@ -23,12 +32,8 @@ fn main() {
 
     println!("red: {}, blue: {}", r, b);
 
-    let player = Player {
-        name: "Bob".to_string(),
-        iq: 10,
-        friends: 10,
-        score: 2,
-    };
+    let mut player = Player::new();
+    player.name = "mohammad".to_string();
 
     bump_player(player, 10);
 }

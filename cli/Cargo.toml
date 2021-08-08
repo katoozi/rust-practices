@@ -1,0 +1,9 @@
+[package]
+name = "cli"
+version = "0.1.0"
+authors = ["katoozi <k2527806@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+paw = "1.0.0"
+structopt = {version = "0.3.21", features = [ "paw" ]}
