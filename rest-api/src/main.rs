@@ -15,6 +15,7 @@ async fn main() -> io::Result<()> {
         App::new()
             .wrap(middleware::Logger::default())
             .service(tweet::list)
+            .service(like::list)
     })
     .bind("0.0.0.0:8080")?
     .run()

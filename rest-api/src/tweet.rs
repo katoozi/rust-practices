@@ -22,7 +22,7 @@ impl Tweet {
         Self {
             id: Uuid::new_v4().to_string(),
             created_at: Utc::now(),
-            message: message,
+            message,
             likes: vec![],
         }
     }
@@ -44,9 +44,9 @@ impl TweetRequest {
 
 #[get("/tweets")]
 pub async fn list() -> HttpResponse {
-    let tweets = Tweets {
-        results: vec![Tweet::new(String::from("google.com"))],
-    };
+    let mut tweets = Tweets::new();
+
+    tweets.results = vec![Tweet::new(String::from("google.com"))];
 
     HttpResponse::Ok()
         .content_type(APPLICATION_JSON)
